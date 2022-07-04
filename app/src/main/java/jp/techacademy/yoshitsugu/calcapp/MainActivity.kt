@@ -24,23 +24,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button4.setOnClickListener(this)
     }
 
-    /*
-    public fun plus(){
-        val editText1:EditText = findViewById(R.id.editText1)
-        val editText2:EditText = findViewById(R.id.editText2)
-
-        Log.d("button1", "ボタンをタップしました")
-        Log.d("button1", editText1.text.toString())
-        Log.d("button1", editText2.text.toString())
-        intent.putExtra("VALUE1",editText1.text.toString())
-        intent.putExtra("VALUE2",editText2.text.toString())
-        intent.putExtra("VALUE3","+")
-
-        val intent = Intent(this, SecondActivity::class.java)
-        //startActivity(intent)
-    }
-     */
-
     override fun onClick(v: View?) {
         val editText1: EditText = findViewById(R.id.editText1)
         val editText2: EditText = findViewById(R.id.editText2)
@@ -81,10 +64,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     Log.d("Main last", v1)
                     Log.d("Main last", v2)
                     Log.d("Main last", op)
-                    intent.putExtra("VALUE1", v1.toInt())
-                    intent.putExtra("VALUE2", v2.toInt())
-                    intent.putExtra("VALUE3", op)
                     val intent = Intent(this, SecondActivity::class.java)
+                    intent.putExtra("VALUE1", v1.toDouble())
+                    intent.putExtra("VALUE2", v2.toDouble())
+                    intent.putExtra("VALUE3", op)
                     startActivity(intent)
                 }
             }

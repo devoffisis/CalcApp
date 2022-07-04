@@ -15,11 +15,11 @@ class SecondActivity : AppCompatActivity() {
         val value2 = intent.getDoubleExtra("VALUE2", 1.0)
         val value3 = intent.getStringExtra("VALUE3")
 
-        Log.d("value1", value1.toString())
-        Log.d("value2", value2.toString())
-        if (value3 != null) {
-            Log.d("value3", value3)
-        }
+        // Log.d("value1", value1.toString())
+        // Log.d("value2", value2.toString())
+        // if (value3 != null) {
+        //     Log.d("value3", value3)
+        // }
 
         val res = if (value3 == "+") {
             value1 + value2

@@ -30,16 +30,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val button1: Button = findViewById(R.id.button1)
         val button2: Button = findViewById(R.id.button2)
         val button3: Button = findViewById(R.id.button3)
-        val button4: Button = findViewById(R.id.button4)
 
-        Log.d("editText1", editText1.text.toString())
-        Log.d("editText2", editText2.text.toString())
-        Log.d("button1 ID", button1.id.toString())
-        Log.d("button2 ID", button2.id.toString())
-        Log.d("button3 ID", button3.id.toString())
-        Log.d("button4 ID", button4.id.toString())
+        // Log.d("editText1", editText1.text.toString())
+        // Log.d("editText2", editText2.text.toString())
+        // Log.d("button1 ID", button1.id.toString())
+        // Log.d("button2 ID", button2.id.toString())
+        // Log.d("button3 ID", button3.id.toString())
+        // Log.d("button4 ID", button4.id.toString())
         v?.let {
-            Log.d("it.id", it.id.toString())
+            // Log.d("it.id", it.id.toString())
             val op = when (it.id.toString()) {
                 button1.id.toString() -> {
                     "+"
@@ -59,11 +58,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val v2 = editText2.text.toString()
             if (v1 != "" && v2 != "") {
                 if (op == "/" && v2 == "0") {
-                    Log.d("Divide-By-Zero", "Error")
+                    // Log.d("Divide-By-Zero", "Error")
                 } else {
-                    Log.d("Main last", v1)
-                    Log.d("Main last", v2)
-                    Log.d("Main last", op)
+                    // Log.d("Main last", v1)
+                    // Log.d("Main last", v2)
+                    // Log.d("Main last", op)
                     val intent = Intent(this, SecondActivity::class.java)
                     intent.putExtra("VALUE1", v1.toDouble())
                     intent.putExtra("VALUE2", v2.toDouble())
